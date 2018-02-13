@@ -1,0 +1,89 @@
+<!--Startpage by Tayumpee-->
+<!--facebook.com/yourwaterlord-->
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>ｓｔａｒｔｐａｇｅ</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script type="text/javascript">
+			function show( show1 ) {
+			  document.getElementById(show1).style.display="block";
+			}
+			function hide( hide1 ) {
+			  document.getElementById(hide1).style.display="none";
+			}
+			function tog( tog1 ) {
+			  document.getElementById(tog1).style.backgroundColor="#777777";
+			}
+			function toh( toh1 ) {
+			  document.getElementById(toh1).style.backgroundColor="#ffffff";
+			}
+		</script>
+	</head>
+	<body OnLoad="document.form1.q.focus();">	
+        	<div class="maincontainer">
+			<div class="bottomcontainer">
+
+				<div class="searchbar">
+					<form name="form1" action="http://google.com/search" method="get" >
+						<input type="text" autocomplete="off" placeholder="where shall we go today?" name="q" class="searchinput"></input>
+					</form>
+				</div>
+			</div>
+			<div class="time" id="time">
+				<script>
+					//document.getElementById("main").innerHTML = Date();
+					function updateClock() {
+						var days = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+						var m = new Date();
+						var dateString =
+						  (days[ m.getDay() ]) + " " +
+						  ("0" + (m.getMonth()+1)).slice(-2) +"/"+
+						  ("0" + m.getDate()).slice(-2) + "/" +
+						  m.getFullYear() +" "+
+						  ("0" + m.getHours()).slice(-2) + ":" +
+						  ("0" + m.getMinutes()).slice(-2) + ":" +
+						  ("0" + m.getSeconds()).slice(-2);
+						
+						// set the content of the element with the ID time to the formatted string
+						document.getElementById('time').innerHTML = dateString;
+
+						// call this function again in 1000ms
+						setTimeout(updateClock, 1000);
+					}
+					updateClock(); // initial call
+				</script>
+			</div>
+			<div class="main" id="main1">
+				<div class="sidebar" style="background-image: url(img/yawn.jpg);"></div>
+				<div class="welcome">i often feel unwanted so i keep quiet in the background of those more precious to me</div>
+				<div class="bookmarkscontainer">
+					<ul>
+						<li><a href="http://www.4chan.org/wg/" class="clink">/wg/</a>
+						<li><a href="http://www.reddit.com/r/analog" class="click">/r/analog</a>
+						<li><a href="http://www.reddit.com" class="clink">reddit</a>
+						<li><a href="http://www.twitter.com" class="clink">twitter</a> 
+						<li><a href="http://app.plex.tv/web/app#" class="clink">plex</a>
+					</ul>
+					<ul>
+						<li><a href="http://www.bbc.co.uk/news" class="clink">bbc news</a>
+						<li><a href="http://www.bloomberg.com" class="clink">bloomberg</a>
+						<li><a href="http://www.engadget.com" class="clink">engadget</a>
+						<li><a href="http://www.youtube.com" class="clink">youtube</a>
+						<li><a href="http://www.bandcamp.com" class="clink">bandcamp</a>
+					</ul>
+					<ul>
+						<li><a href="http://www.amazon.co.uk" class="clink">amazon</a>
+						<li><a href="http://www.ebay.co.uk" class="clink">ebay</a>
+						<li><a href="http://www.massdrop.com" class="clink">massdrop</a>
+						<li><a href="https://www.waterstones.com" class="clink">waterstones</a>
+						<li><a href="http://transmission.samhastings.co.uk" class="clink">transmission</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
